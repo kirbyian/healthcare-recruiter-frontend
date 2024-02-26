@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { MaterialReactTable, useMaterialReactTable, MRT_ColumnDef } from 'material-react-table';
-import { CSVLink } from 'react-csv';
 import './Dashboard.css';
 
 interface Job {
