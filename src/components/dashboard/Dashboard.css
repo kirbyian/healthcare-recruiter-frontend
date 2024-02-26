@@ -1,0 +1,85 @@
+/* Dashboard.css */
+
+/* Primary color: Dark Navy */
+:root {
+    --primary-color: #001f3f;
+  }
+  
+  /* Secondary color: Teal */
+  :root {
+    --secondary-color: #00796b;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3498db; /* Vibrant blue background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-container {
+    margin-bottom: 20px;
+    background-color: #ecf0f1; /* Light gray background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table thead th {
+    background-color: #3498db; /* Vibrant blue background */
+    color: #ffffff; /* White text color */
+    font-weight: 600;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #2980b9; /* Slightly darker blue border */
+  }
+  
+  .table tbody td {
+    padding: 16px;
+    border-bottom: 1px solid #ecf0f1; /* Light gray border */
+  }
+  
+  .table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f2f5f8; /* Light blueish background on hover */
+  }
+  
+  .btn-container {
+    margin-top: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .btn:disabled {
+    background-color: #ced4da;
+    cursor: not-allowed;
+  }
+  
