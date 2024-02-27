@@ -53,7 +53,6 @@ const Dashboard: React.FC = () => {
   const csvData = selectedRows.map((id) => {
     const job = jobs.find((j) => j.id === id);
     return job ? {
-      jobReference: job.jobReference,
       hospital: job.hospital,
       department: job.department,
       position: job.position,
@@ -65,10 +64,6 @@ const Dashboard: React.FC = () => {
   }).filter(Boolean);
 
   const columns: MRT_ColumnDef<Job>[] = [
-    {
-      accessorKey: 'jobReference',
-      header: 'Job Reference',
-    },
     {
       accessorKey: 'hospital',
       header: 'Hospital',
