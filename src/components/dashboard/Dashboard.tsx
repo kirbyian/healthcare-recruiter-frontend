@@ -96,8 +96,17 @@ const Dashboard: React.FC = () => {
     {
       accessorKey: 'link',
       header: 'Link',
-    },
+      Cell: ({ cell }) => {
+        const linkValue = cell.getValue() as string | undefined; // Explicitly cast to string | undefined
+        return (
+          <a href={linkValue} target="_blank" rel="noopener noreferrer">
+            {linkValue}
+          </a>
+        );
+      },
+    }
   ];
+  
 
   const table = useMaterialReactTable({
     columns,
