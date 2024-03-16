@@ -14,9 +14,9 @@ interface Job {
   link: string;
 }
 
-const url = process.env.REACT_APP_HCR_URL || '';
+const url = process.env.REACT_APP_HCR_URL || ''+'/jobs?isArchived=true';
 
-const Dashboard: React.FC = () => {
+const ArchivedJobs: React.FC = () => {
   const [jobs, setJobs] = useState<Job[]>([]);
 
   useEffect(() => {
@@ -25,15 +25,13 @@ const Dashboard: React.FC = () => {
 
   const fetchJobsData = async () => {
     try {
-      console.log(url); // Log the URL to the console
-      const response = await fetch(url+'/jobs?isArchived=false');
+      const response = await fetch(url+'/jobs?isArchived=true');
       const data = await response.json();
       setJobs(data);
     } catch (error) {
       console.error('Error fetching jobs data:', error);
     }
   };
-
 
 
   const columns: MRT_ColumnDef<Job>[] = [
@@ -85,11 +83,11 @@ const Dashboard: React.FC = () => {
   return (
     <div className="container">
       <div style={{ overflowX: 'auto' }} className="table-container">
-        <h4>Total Records: {jobs.length}</h4>
+        <h4>Total Archived Records: {jobs.length}</h4>
         <MaterialReactTable table={table} />
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default ArchivedJobs;

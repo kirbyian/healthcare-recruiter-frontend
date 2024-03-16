@@ -1,13 +1,8 @@
 
 import React from 'react';
 import './Banner.css'; // Import CSS file for styling
-import { Col, Container, Row,Image } from 'react-bootstrap';
-import { useMemo } from 'react';
-import {
-  MaterialReactTable,
-  useMaterialReactTable,
-  type MRT_ColumnDef,
-} from 'material-react-table';
+import { Container } from 'react-bootstrap';
+
 
 interface BannerProps {
   text: string;
